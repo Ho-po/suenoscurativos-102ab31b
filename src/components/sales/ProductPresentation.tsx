@@ -1,0 +1,90 @@
+import { BookOpen, Layers, PenTool, Sparkles } from "lucide-react";
+
+export const ProductPresentation = () => {
+  const features = [
+    {
+      icon: BookOpen,
+      title: "Guía Completa",
+      description: "Más de 80 páginas de ejercicios prácticos y reflexiones profundas"
+    },
+    {
+      icon: Layers,
+      title: "Metodología en Capas",
+      description: "Sistema progresivo que te lleva de la limpieza superficial a la sanación profunda"
+    },
+    {
+      icon: PenTool,
+      title: "Espacio para Escribir",
+      description: "Secciones interactivas donde plasmas tu proceso de transformación"
+    },
+    {
+      icon: Sparkles,
+      title: "Práctica Diaria",
+      description: "Rituales y ejercicios diseñados para incorporar el Ho'oponopono a tu vida"
+    }
+  ];
+
+  return (
+    <section className="py-20 px-4 bg-secondary">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+            Conoce el <span className="text-gradient-gold">Cuaderno de Sanación</span>
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            No es solo un ebook. Es un viaje guiado hacia tu interior, donde cada página te acerca 
+            más a la paz, la liberación y el amor propio.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={index}
+                className="bg-card rounded-xl p-6 border border-border hover:border-primary/50 transition-all duration-300 group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Product image placeholder */}
+        <div className="flex flex-col md:flex-row items-center gap-8 bg-card rounded-2xl p-8 border border-primary/20">
+          <div className="flex-shrink-0">
+            <div className="w-48 h-64 bg-secondary border-2 border-primary/30 rounded-lg flex items-center justify-center shadow-spiritual">
+              <div className="text-center p-4">
+                <Sparkles className="w-10 h-10 text-primary mx-auto mb-3 lotus-glow" />
+                <p className="text-muted-foreground text-xs">Mockup del Cuaderno</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-2xl font-serif font-bold text-foreground mb-4">
+              Tu compañero de transformación
+            </h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              El Cuaderno de Sanación con Ho'oponopono fue creado para guiarte paso a paso 
+              en un proceso de limpieza emocional profunda. No necesitas experiencia previa 
+              — solo la disposición de abrirte a sanar.
+            </p>
+            <p className="text-primary font-medium">
+              Formato digital (PDF) • Acceso inmediato • Compatible con todos los dispositivos
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
