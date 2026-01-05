@@ -80,6 +80,7 @@ export default {
       },
       fontFamily: {
         serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
+        bebas: ["Bebas Neue", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

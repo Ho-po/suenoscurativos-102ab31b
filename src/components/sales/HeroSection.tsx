@@ -7,52 +7,48 @@ interface HeroSectionProps {
 
 export const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden px-4 py-16">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-32 right-10 w-48 h-48 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+    <section className="relative min-h-screen flex items-center justify-center hero-bg-meditation overflow-hidden px-4 py-20">
+      {/* Decorative glow elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-primary/30 mb-8">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/60 border border-primary/40 mb-8 backdrop-blur-sm">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm text-primary font-medium">Sistema Único de Limpieza Emocional</span>
+          <span className="text-sm text-primary font-medium tracking-wide">Sistema Único de Limpieza en Capas</span>
         </div>
 
-        {/* Main Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
-          <span className="text-gradient-gold">CUADERNO DE SANACIÓN</span>
-          <br />
-          <span className="text-foreground">CON HO'OPONOPONO</span>
+        {/* Main Headline - Bebas Neue */}
+        <h1 className="font-bebas leading-none mb-4">
+          <span className="block text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground tracking-wide">
+            CUADERNO DE SANACIÓN
+          </span>
+          <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gradient-gold tracking-wider mt-2">
+            CON HO'OPONOPONO
+          </span>
         </h1>
 
-        {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-primary mb-8 font-medium">
+        {/* Emotional Question */}
+        <p className="text-xl md:text-2xl lg:text-3xl text-primary font-medium mt-8 mb-4">
           ¿Hay algo dentro de ti que pide ser liberado?
         </p>
 
-        {/* Emotional Story */}
-        <div className="max-w-2xl mx-auto mb-10">
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Tal vez no lo dices en voz alta... pero lo sientes. Ese peso que cargas en el pecho.
-            Las noches en que el silencio duele. Los recuerdos que vuelven sin permiso.
-            Las relaciones que te drenan. La sensación de que algo está bloqueando tu camino.
-          </p>
-          <p className="text-lg text-foreground mt-4 font-medium">
-            No estás roto/a. Solo hay memorias que piden ser sanadas.
-          </p>
-        </div>
+        {/* Short context line */}
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12">
+          No estás roto/a. Solo hay memorias que piden ser sanadas.
+        </p>
 
-        {/* Product Placeholder */}
-        <div className="mb-10">
-          <div className="w-64 h-80 mx-auto bg-secondary/50 border-2 border-primary/30 rounded-lg flex items-center justify-center shadow-spiritual">
-            <div className="text-center p-6">
-              <Sparkles className="w-12 h-12 text-primary mx-auto mb-4 lotus-glow" />
-              <p className="text-muted-foreground text-sm">Imagen del Ebook</p>
-              <p className="text-primary text-xs mt-1">Cuaderno de Sanación</p>
+        {/* Product Mockup Placeholder */}
+        <div className="mb-12">
+          <div className="w-72 h-96 md:w-80 md:h-[28rem] mx-auto bg-secondary/40 border-2 border-primary/30 rounded-xl flex items-center justify-center shadow-gold backdrop-blur-sm">
+            <div className="text-center p-8">
+              <Sparkles className="w-16 h-16 text-primary mx-auto mb-6 lotus-glow" />
+              <p className="text-foreground font-medium text-lg">Cuaderno de Sanación</p>
+              <p className="text-primary text-sm mt-2">con Ho'oponopono</p>
+              <p className="text-muted-foreground text-xs mt-4">[Imagen del Ebook]</p>
             </div>
           </div>
         </div>
@@ -61,12 +57,12 @@ export const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
         <Button
           onClick={onCTAClick}
           size="lg"
-          className="text-lg px-10 py-7 gradient-gold text-primary-foreground font-bold shadow-gold hover:opacity-90 transition-all duration-300 hover:scale-105"
+          className="text-lg md:text-xl px-10 md:px-14 py-7 md:py-8 gradient-gold text-primary-foreground font-bold shadow-gold hover:opacity-90 transition-all duration-300 hover:scale-105"
         >
           QUIERO SANAR Y LIBERAR MI CORAZÓN
         </Button>
 
-        <p className="text-muted-foreground text-sm mt-4">
+        <p className="text-muted-foreground text-sm mt-6">
           ⚡ Acceso inmediato después del pago
         </p>
       </div>
