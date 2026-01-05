@@ -1,31 +1,23 @@
 import { BookOpen, Layers, PenTool, Sparkles } from "lucide-react";
-
 export const ProductPresentation = () => {
-  const features = [
-    {
-      icon: BookOpen,
-      title: "Guía Completa",
-      description: "Más de 80 páginas de ejercicios prácticos y reflexiones profundas"
-    },
-    {
-      icon: Layers,
-      title: "Metodología en Capas",
-      description: "Sistema progresivo que te lleva de la limpieza superficial a la sanación profunda"
-    },
-    {
-      icon: PenTool,
-      title: "Espacio para Escribir",
-      description: "Secciones interactivas donde plasmas tu proceso de transformación"
-    },
-    {
-      icon: Sparkles,
-      title: "Práctica Diaria",
-      description: "Rituales y ejercicios diseñados para incorporar el Ho'oponopono a tu vida"
-    }
-  ];
-
-  return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 bg-secondary">
+  const features = [{
+    icon: BookOpen,
+    title: "Guía Completa",
+    description: "Más de 80 páginas de ejercicios prácticos y reflexiones profundas"
+  }, {
+    icon: Layers,
+    title: "Metodología en Capas",
+    description: "Sistema progresivo que te lleva de la limpieza superficial a la sanación profunda"
+  }, {
+    icon: PenTool,
+    title: "Espacio para Escribir",
+    description: "Secciones interactivas donde plasmas tu proceso de transformación"
+  }, {
+    icon: Sparkles,
+    title: "Práctica Diaria",
+    description: "Rituales y ejercicios diseñados para incorporar el Ho'oponopono a tu vida"
+  }];
+  return <section className="py-12 sm:py-16 md:py-20 px-4 bg-secondary">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-3 sm:mb-4">
@@ -40,12 +32,8 @@ export const ProductPresentation = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
-            return (
-              <div
-                key={index}
-                className="bg-card rounded-xl p-5 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group"
-              >
+          const Icon = feature.icon;
+          return <div key={index} className="bg-card rounded-xl p-5 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300 group">
                 <div className="flex items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
@@ -55,9 +43,8 @@ export const ProductPresentation = () => {
                     <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
 
         {/* Product image placeholder */}
@@ -71,9 +58,7 @@ export const ProductPresentation = () => {
             </div>
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-3 sm:mb-4">
-              Tu compañero de transformación
-            </h3>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-3 sm:mb-4">Mira lo que encontrarás dentro del Cuaderno de Sanación   </h3>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4">
               El Cuaderno de Sanación con Ho'oponopono fue creado para guiarte paso a paso 
               en un proceso de limpieza emocional profunda. No necesitas experiencia previa 
@@ -85,6 +70,5 @@ export const ProductPresentation = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
