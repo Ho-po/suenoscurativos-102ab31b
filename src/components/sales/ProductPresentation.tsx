@@ -1,4 +1,18 @@
 import { BookOpen, Layers, PenTool, Sparkles } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import preview1 from "@/assets/cuaderno-preview/preview-1.png";
+import preview2 from "@/assets/cuaderno-preview/preview-2.png";
+import preview3 from "@/assets/cuaderno-preview/preview-3.png";
+import preview4 from "@/assets/cuaderno-preview/preview-4.png";
+
+const previewImages = [preview1, preview2, preview3, preview4];
+
 export const ProductPresentation = () => {
   const features = [{
     icon: BookOpen,
@@ -49,13 +63,22 @@ export const ProductPresentation = () => {
 
         {/* Product image placeholder */}
         <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 bg-card rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-primary/20">
-          <div className="flex-shrink-0">
-            <div className="w-36 h-48 sm:w-44 sm:h-60 md:w-48 md:h-64 bg-secondary border-2 border-primary/30 rounded-lg flex items-center justify-center shadow-spiritual">
-              <div className="text-center p-4">
-                <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-primary mx-auto mb-2 sm:mb-3 lotus-glow" />
-                <p className="text-muted-foreground text-xs">Mockup del Cuaderno</p>
-              </div>
-            </div>
+          <div className="flex-shrink-0 w-full md:w-auto">
+            <Carousel opts={{ loop: true }} className="w-full max-w-[280px] sm:max-w-xs md:max-w-sm mx-auto md:mx-0">
+              <CarouselContent>
+                {previewImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <img 
+                      src={image} 
+                      alt={`Preview del cuaderno ${index + 1}`} 
+                      className="rounded-lg shadow-spiritual w-full h-auto border-2 border-primary/20"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="-left-3 sm:-left-4 bg-primary/90 hover:bg-primary text-primary-foreground border-none" />
+              <CarouselNext className="-right-3 sm:-right-4 bg-primary/90 hover:bg-primary text-primary-foreground border-none" />
+            </Carousel>
           </div>
           <div className="flex-1 text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-foreground mb-3 sm:mb-4">Mira lo que encontrarás dentro del Cuaderno de Sanación   </h3>
