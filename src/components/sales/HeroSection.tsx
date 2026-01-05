@@ -47,7 +47,7 @@ export const HeroSection = ({ onCTAClick }: HeroSectionProps) => {
           <img 
             src={cuadernoMockup} 
             alt="Cuaderno de Sanación con Ho'oponopono - Ebook de meditación y limpieza espiritual" 
-            className="w-56 sm:w-64 md:w-72 lg:w-80 xl:w-96 mx-auto shadow-gold rounded-lg hover:scale-105 transition-transform duration-500"
+            className="w-64 sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem] mx-auto shadow-gold rounded-lg hover:scale-105 transition-transform duration-500"
           />
         </div>
 
