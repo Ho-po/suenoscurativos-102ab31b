@@ -57,43 +57,43 @@ export const BonusList = () => {
   }, 0);
 
   return (
-    <section className="py-20 px-4 gradient-hero">
+    <section className="py-12 sm:py-16 md:py-20 px-4 gradient-hero">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-6">
-            <Gift className="w-5 h-5 text-primary" />
-            <span className="text-primary font-medium">8 Bonus Exclusivos</span>
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/20 border border-primary/30 mb-4 sm:mb-6">
+            <Gift className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+            <span className="text-sm sm:text-base text-primary font-medium">8 Bonus Exclusivos</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-3 sm:mb-4">
             Lo que <span className="text-gradient-gold">recibes hoy</span>
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-primary mx-auto rounded-full mb-6 sm:mb-8" />
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Además del Cuaderno de Sanación, hoy te llevas estos 8 regalos especiales 
             para potenciar tu transformación.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12">
           {bonuses.map((bonus, index) => {
             const Icon = bonus.icon;
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl p-5 border border-border hover:border-primary/50 transition-all duration-300 group"
+                className="bg-card rounded-xl p-4 sm:p-5 border border-border hover:border-primary/50 transition-all duration-300 group"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="text-lg font-bold text-foreground">{bonus.title}</h3>
-                      <span className="text-primary font-bold text-sm whitespace-nowrap">
+                  <div className="flex-1 min-w-0">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-2 mb-1 sm:mb-2">
+                      <h3 className="text-base sm:text-lg font-bold text-foreground">{bonus.title}</h3>
+                      <span className="text-primary font-bold text-xs sm:text-sm whitespace-nowrap">
                         Valor: {bonus.value}
                       </span>
                     </div>
-                    <p className="text-muted-foreground text-sm">{bonus.description}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{bonus.description}</p>
                   </div>
                 </div>
               </div>
@@ -102,10 +102,10 @@ export const BonusList = () => {
         </div>
 
         {/* Total Value */}
-        <div className="text-center bg-secondary rounded-2xl p-8 border border-primary/30">
-          <p className="text-muted-foreground mb-2">Valor total de todos los bonus:</p>
-          <p className="text-4xl font-bold text-primary">${totalValue} USD</p>
-          <p className="text-foreground mt-4 text-lg">
+        <div className="text-center bg-secondary rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-primary/30">
+          <p className="text-sm sm:text-base text-muted-foreground mb-2">Valor total de todos los bonus:</p>
+          <p className="text-3xl sm:text-4xl font-bold text-primary">${totalValue} USD</p>
+          <p className="text-base sm:text-lg text-foreground mt-3 sm:mt-4">
             ¡Todos <span className="text-primary font-semibold">GRATIS</span> al adquirir el Cuaderno de Sanación hoy!
           </p>
         </div>

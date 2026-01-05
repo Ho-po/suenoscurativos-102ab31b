@@ -29,47 +29,47 @@ export const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 gradient-hero">
+    <section className="py-12 sm:py-16 md:py-20 px-4 gradient-hero">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-3 sm:mb-4">
             Historias de <span className="text-gradient-gold">Transformación</span>
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-8" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-16 sm:w-20 md:w-24 h-1 bg-primary mx-auto rounded-full mb-6 sm:mb-8" />
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Personas como tú que decidieron dar el paso y hoy viven una vida más ligera y plena.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-6 border border-border hover:border-primary/50 transition-all duration-300"
+              className="bg-card rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-border hover:border-primary/50 transition-all duration-300"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3 sm:mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
                 ))}
               </div>
 
               {/* Quote icon */}
-              <Quote className="w-8 h-8 text-primary/30 mb-3" />
+              <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary/30 mb-2 sm:mb-3" />
 
               {/* Testimonial text */}
-              <p className="text-foreground leading-relaxed mb-4">
+              <p className="text-sm sm:text-base text-foreground leading-relaxed mb-3 sm:mb-4">
                 "{testimonial.text}"
               </p>
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary font-bold">{testimonial.name.charAt(0)}</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-sm sm:text-base text-primary font-bold">{testimonial.name.charAt(0)}</span>
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                  <p className="text-sm sm:text-base font-medium text-foreground">{testimonial.name}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.location}</p>
                 </div>
               </div>
             </div>
