@@ -8,10 +8,10 @@ import { removeBackground, loadImage, getSegmenter } from '@/lib/removeBackgroun
 // Import bonus images
 import bonusArcangeles from '@/assets/bonus/bonus-arcangeles.png';
 import bonusColorear from '@/assets/bonus/bonus-colorear.png';
-import bonusDecodificador from '@/assets/bonus/bonus-decodificador.jpg';
+import bonusDecodificador from '@/assets/bonus/bonus-decodificador.png';
 import bonusDiario from '@/assets/bonus/bonus-diario.png';
 import bonusHogar from '@/assets/bonus/bonus-hogar.png';
-import bonusLinaje from '@/assets/bonus/bonus-linaje.jpg';
+import bonusLinaje from '@/assets/bonus/bonus-linaje.png';
 import bonusMeditaciones from '@/assets/bonus/bonus-meditaciones.png';
 import bonusOraculos from '@/assets/bonus/bonus-oraculos.png';
 
