@@ -1,11 +1,19 @@
-import { Shield, Check } from "lucide-react";
+import { Shield, Check, BadgeCheck } from "lucide-react";
 
 export const GuaranteeSection = () => {
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 bg-secondary">
       <div className="max-w-3xl mx-auto">
-        <div className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border-2 border-primary/30 shadow-spiritual">
-          <div className="text-center">
+        <div className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border-2 border-primary/30 shadow-spiritual relative">
+          {/* Badge */}
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <div className="bg-green-600 text-white font-bold px-4 py-2 rounded-full text-xs sm:text-sm flex items-center gap-2 shadow-lg">
+              <BadgeCheck className="w-4 h-4" />
+              <span>COMPRA 100% SEGURA</span>
+            </div>
+          </div>
+
+          <div className="text-center mt-4">
             {/* Shield icon */}
             <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 sm:mb-6">
               <Shield className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-primary" />
