@@ -92,33 +92,29 @@ export const BonusList = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12">
           {bonuses.map((bonus, index) => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 group"
+                className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 group flex flex-col"
               >
-                <div className="flex items-stretch">
-                  {/* Imagem do produto */}
-                  <div className="flex-shrink-0 w-28 sm:w-32 md:w-36 bg-secondary/50 flex items-center justify-center p-2">
-                    <img
-                      src={bonus.image}
-                      alt={bonus.title}
-                      className="w-full h-auto max-h-36 sm:max-h-40 object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  
-                  {/* Conteúdo */}
-                  <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-2 mb-1 sm:mb-2">
-                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground leading-tight">{bonus.title}</h3>
-                      <span className="text-primary font-bold text-xs sm:text-sm whitespace-nowrap">
-                        Valor: {bonus.value}
-                      </span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{bonus.description}</p>
-                  </div>
+                {/* Imagem do produto no topo */}
+                <div className="bg-secondary/30 flex items-center justify-center p-3 sm:p-4">
+                  <img
+                    src={bonus.image}
+                    alt={bonus.title}
+                    className="w-full h-32 sm:h-40 md:h-44 object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                {/* Conteúdo abaixo */}
+                <div className="p-3 sm:p-4 flex flex-col flex-1">
+                  <span className="text-primary font-bold text-xs sm:text-sm mb-1">
+                    Valor: {bonus.value}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-bold text-foreground leading-tight mb-2">{bonus.title}</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{bonus.description}</p>
                 </div>
               </div>
             );
