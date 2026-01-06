@@ -1,51 +1,69 @@
 import { Gift, Sparkles, Heart, BookOpen, Home, Shuffle, Calendar, Headphones } from "lucide-react";
 
+// Importar imagens dos bônus
+import bonusArcangeles from "@/assets/bonus/bonus-arcangeles.png";
+import bonusColorear from "@/assets/bonus/bonus-colorear.png";
+import bonusDecodificador from "@/assets/bonus/bonus-decodificador.jpg";
+import bonusLinaje from "@/assets/bonus/bonus-linaje.jpg";
+import bonusHogar from "@/assets/bonus/bonus-hogar.png";
+import bonusOraculos from "@/assets/bonus/bonus-oraculos.png";
+import bonusDiario from "@/assets/bonus/bonus-diario.png";
+import bonusMeditaciones from "@/assets/bonus/bonus-meditaciones.png";
+
 export const BonusList = () => {
   const bonuses = [
     {
       icon: Sparkles,
+      image: bonusArcangeles,
       title: "Manual de Conexión con los Arcángeles",
       description: "Aprende a invocar la protección y guía de los arcángeles durante tu práctica de limpieza.",
       value: "$19"
     },
     {
       icon: Heart,
-      title: "Guía de Amor Propio con Ho'oponopono",
-      description: "Ejercicios específicos para sanar tu relación contigo mismo/a y cultivar el amor incondicional.",
+      image: bonusColorear,
+      title: "Dibujos Terapéuticos para Colorear",
+      description: "Páginas de mandalas y diseños relajantes para meditar mientras coloreas y liberas tensiones.",
       value: "$15"
     },
     {
       icon: BookOpen,
-      title: "Decodificador Emocional con Palabras Gatillo",
+      image: bonusDecodificador,
+      title: "Biodescodificador Emocional con Palabras-Gatillo",
       description: "Identifica las palabras que activan tus memorias dolorosas y aprende a limpiarlas.",
       value: "$27"
     },
     {
       icon: Gift,
+      image: bonusLinaje,
       title: "Cuaderno de Sanación del Linaje Familiar",
       description: "Ejercicios para limpiar el karma ancestral y liberar a las generaciones pasadas y futuras.",
       value: "$23"
     },
     {
       icon: Home,
+      image: bonusHogar,
       title: "Mapa de Limpieza Energética del Hogar",
       description: "Guía para aplicar el Ho'oponopono en cada rincón de tu casa y crear un espacio de paz.",
       value: "$17"
     },
     {
       icon: Shuffle,
-      title: "Caja de Oráculos - Palabras que Sanan",
+      image: bonusOraculos,
+      title: "Oráculos - Palabras que Curan",
       description: "50 cartas virtuales con mensajes de sanación para guiar tu práctica diaria.",
       value: "$19"
     },
     {
       icon: Calendar,
-      title: "Diario de 21 Días de Limpieza y Autocuidado",
+      image: bonusDiario,
+      title: "Diario de 21 Días de Limpieza y Autosanación",
       description: "Planificador con rituales diarios para establecer el hábito de la limpieza consciente.",
       value: "$29"
     },
     {
       icon: Headphones,
+      image: bonusMeditaciones,
       title: "Meditaciones Guiadas Ho'oponopono (Audio)",
       description: "3 meditaciones en audio para diferentes momentos: mañana, noche y limpieza de emergencia.",
       value: "$35"
@@ -76,24 +94,30 @@ export const BonusList = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12">
           {bonuses.map((bonus, index) => {
-            const Icon = bonus.icon;
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl p-4 sm:p-5 border border-border hover:border-primary/50 transition-all duration-300 group"
+                className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 group"
               >
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="flex items-stretch">
+                  {/* Imagem do produto */}
+                  <div className="flex-shrink-0 w-28 sm:w-32 md:w-36 bg-secondary/50 flex items-center justify-center p-2">
+                    <img
+                      src={bonus.image}
+                      alt={bonus.title}
+                      className="w-full h-auto max-h-36 sm:max-h-40 object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <div className="flex-1 min-w-0">
+                  
+                  {/* Conteúdo */}
+                  <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-2 mb-1 sm:mb-2">
-                      <h3 className="text-base sm:text-lg font-bold text-foreground">{bonus.title}</h3>
+                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground leading-tight">{bonus.title}</h3>
                       <span className="text-primary font-bold text-xs sm:text-sm whitespace-nowrap">
                         Valor: {bonus.value}
                       </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-muted-foreground">{bonus.description}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{bonus.description}</p>
                   </div>
                 </div>
               </div>
