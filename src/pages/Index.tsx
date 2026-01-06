@@ -12,6 +12,7 @@ import { MidPageCTA } from "@/components/sales/MidPageCTA";
 import { PricingSection } from "@/components/sales/PricingSection";
 import { UrgencyCounter } from "@/components/sales/UrgencyCounter";
 import { TestimonialsSection } from "@/components/sales/TestimonialsSection";
+import { AboutAuthorSection } from "@/components/sales/AboutAuthorSection";
 import { GuaranteeSection } from "@/components/sales/GuaranteeSection";
 import { FAQSection } from "@/components/sales/FAQSection";
 import { DisclaimerFooter } from "@/components/sales/DisclaimerFooter";
@@ -45,6 +46,7 @@ const Index = () => {
       <PricingSection onCTAClick={handleCheckout} />
       <UrgencyCounter />
       <TestimonialsSection />
+      <AboutAuthorSection />
       <GuaranteeSection />
       <FAQSection />
       <DisclaimerFooter />
