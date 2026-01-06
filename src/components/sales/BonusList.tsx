@@ -100,11 +100,11 @@ export const BonusList = () => {
                 className="bg-card rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 group flex flex-col"
               >
                 {/* Imagem do produto no topo */}
-                <div className="bg-secondary/30 flex items-center justify-center p-3 sm:p-4">
+                <div className="bg-secondary/30 flex items-center justify-center p-4 sm:p-6">
                   <img
                     src={bonus.image}
                     alt={bonus.title}
-                    className="w-full h-32 sm:h-40 md:h-44 object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 sm:h-56 md:h-64 object-contain rounded-lg shadow-md group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 
