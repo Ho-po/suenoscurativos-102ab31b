@@ -110,9 +110,14 @@ export const BonusList = () => {
                 
                 {/* Conteúdo abaixo */}
                 <div className="p-3 sm:p-4 flex flex-col flex-1">
-                  <span className="text-primary font-bold text-xs sm:text-sm mb-1">
-                    Valor: {bonus.value}
-                  </span>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-muted-foreground line-through text-xs sm:text-sm">
+                      Valor: {bonus.value}
+                    </span>
+                    <span className="text-green-500 font-bold text-xs sm:text-sm">
+                      ¡Incluido GRATIS!
+                    </span>
+                  </div>
                   <h3 className="text-sm sm:text-base font-bold text-foreground leading-tight mb-2">{bonus.title}</h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{bonus.description}</p>
                 </div>
