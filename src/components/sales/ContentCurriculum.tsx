@@ -110,7 +110,7 @@ export const ContentCurriculum = () => {
         </div>
 
         {/* Phases Accordion */}
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible defaultValue="phase-1" className="space-y-4">
           {phases.map((phase) => (
             <AccordionItem
               key={phase.number}
