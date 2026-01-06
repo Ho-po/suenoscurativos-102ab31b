@@ -66,7 +66,7 @@ export const PricingSection = ({ onCTAClick }: PricingSectionProps) => {
             <Button
               onClick={onCTAClick}
               size="lg"
-              className="w-full text-sm sm:text-base md:text-lg py-5 sm:py-6 md:py-7 bg-green-600 hover:bg-green-700 text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse"
+              className="w-full text-sm sm:text-base md:text-lg py-5 sm:py-6 md:py-7 bg-green-600 hover:bg-green-700 text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-cta"
             >
               SÍ, QUIERO COMENZAR MI SANACIÓN
             </Button>
