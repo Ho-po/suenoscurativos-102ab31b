@@ -23,7 +23,7 @@ export const trackButtonClick = (buttonName: string, location: string) => {
 };
 
 export const trackCheckoutIntent = (source: string) => {
-  pushToDataLayer('checkout_intent', {
+  pushToDataLayer('begin_checkout', {
     source,
     product: 'cuaderno_hooponopono',
     price: 9.90,
