@@ -2,6 +2,7 @@ import { HeroSection } from "@/components/sales/HeroSection";
 import { IdentificationSection } from "@/components/sales/IdentificationSection";
 import { HoooponoponoExplainer } from "@/components/sales/HoooponoponoExplainer";
 import { ProductPresentation } from "@/components/sales/ProductPresentation";
+import { ContentCurriculum } from "@/components/sales/ContentCurriculum";
 import { WhatYouRelease } from "@/components/sales/WhatYouRelease";
 import { ProgramPhases } from "@/components/sales/ProgramPhases";
 import { BonusList } from "@/components/sales/BonusList";
@@ -32,6 +33,7 @@ const Index = () => {
       <IdentificationSection />
       <HoooponoponoExplainer />
       <ProductPresentation />
+      <ContentCurriculum />
       <WhatYouRelease />
       <ProgramPhases />
       <BonusList />
