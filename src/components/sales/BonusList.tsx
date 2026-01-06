@@ -92,7 +92,7 @@ export const BonusList = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12">
+        <div className="grid grid-cols-1 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12 max-w-2xl mx-auto">
           {bonuses.map((bonus, index) => {
             return (
               <div
