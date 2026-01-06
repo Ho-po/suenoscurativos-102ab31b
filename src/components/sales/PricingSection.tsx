@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Shield, Zap } from "lucide-react";
+import productBundle from "@/assets/product-bundle.png";
 
 interface PricingSectionProps {
   onCTAClick: () => void;
@@ -20,12 +21,20 @@ export const PricingSection = ({ onCTAClick }: PricingSectionProps) => {
 
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 bg-secondary" id="pricing">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8 sm:mb-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-foreground mb-3 sm:mb-4">
             Oferta Especial por <span className="text-gradient-gold">Tiempo Limitado</span>
           </h2>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-primary mx-auto rounded-full" />
+        </div>
+
+        {/* Discount Badge */}
+        <div className="flex justify-center mb-6">
+          <div className="bg-red-600 text-white font-bold px-6 py-2 rounded-full text-sm sm:text-base flex items-center gap-2">
+            <span>⏰</span>
+            <span>80% DE DESCUENTO HOY</span>
+          </div>
         </div>
 
         {/* Pricing Card */}
@@ -40,6 +49,15 @@ export const PricingSection = ({ onCTAClick }: PricingSectionProps) => {
 
           {/* Content */}
           <div className="p-5 sm:p-6 md:p-8">
+            {/* Product Image */}
+            <div className="flex justify-center mb-6 sm:mb-8">
+              <img 
+                src={productBundle} 
+                alt="Cuaderno de Sanación con Ho'oponopono y todos los bonus incluidos" 
+                className="max-w-full h-auto max-h-80 sm:max-h-96 object-contain"
+              />
+            </div>
+
             {/* Price */}
             <div className="text-center mb-6 sm:mb-8">
               <p className="text-sm sm:text-base text-muted-foreground mb-2">De <span className="line-through">$49.90 USD</span></p>
