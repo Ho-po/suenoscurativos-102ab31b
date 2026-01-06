@@ -22,8 +22,7 @@ const Index = () => {
   };
 
   const handleCheckout = () => {
-    // Link to external checkout platform
-    window.open("https://tu-plataforma-de-pago.com/checkout", "_blank");
+    window.open("https://pay.hotmart.com/K103696884R", "_blank");
   };
 
   return (
